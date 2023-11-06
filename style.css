@@ -10,7 +10,7 @@ div {
 
 .pageContainer {
   display: grid;
-  grid: 1fr 4fr / minmax(200px, 1fr) 4fr;
+  grid: 150px 1fr / minmax(200px, 1fr) 4fr;
   height: 100vh;
   width: 100vw;
 }
@@ -26,7 +26,7 @@ div {
 .sidebar>.container {
   display: grid;
   gap: 40px;
-  padding: 15px;
+  padding: 25px 15px;
 }
 
 ul {
@@ -49,12 +49,91 @@ img {
 
 .dash {
   position: relative;
-  padding-left: 35px;
+  padding-left: 52.5px;
 }
 
 .dash>img {
-  min-width: 25%;
+  min-width: 20%;
   height: auto;
   position: absolute;
   left: -10px;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.row {
+  padding: 0 30px;
+  align-items: center; 
+}
+
+.row.one {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+
+.row .container {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.search {
+  border: solid 1px rgb(238, 236, 236);
+  background-color: rgb(238, 236, 236);
+  border-radius: 10px;
+  height: 20px;
+  min-width: 200px;
+}
+
+.container>.search+img, img[src='bell.svg'] {
+  height: 20px;
+}
+
+.container.profile {
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profilePic {
+  border-radius: 20px;
+}
+
+.row.one .profilePic {
+  height: 40px;
+  width: 40px;
+}
+
+.row.two {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr;
+  gap: 20px;
+}
+
+.row.two .profilePic {
+  height: 50px;
+  width: 50px;
+}
+
+.row.two .welcome {
+  display: grid;
+  gap: 8px;
+  font-size: clamp(0.9rem, 1.25rem, 1.5rem);
+}
+
+.row.two .buttons {
+  gap: 1rem;
+  display: grid;
+  justify-content: end;
+}
+
+button {
+  width: 75px;
+  padding: 8px;
+  border-radius: 20px;
+  text-align: center;
 }
